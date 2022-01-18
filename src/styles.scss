@@ -1,1 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
+
+body {
+    margin-left: 200px !important;
+    margin-right: 200px !important;
+    margin: 0;
+}
+
+@media(max-width: 1000px) {
+    h1 {
+        height: 1em;
+    }
+}
+
+// Background: linear-gradient(180deg, rgb(216, 224, 216), rgb(33, 107, 30));
