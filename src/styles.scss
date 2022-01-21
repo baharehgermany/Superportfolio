@@ -1,9 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
+    color: black;
     margin-left: 200px !important;
     margin-right: 200px !important;
-    margin: 0;
+    background: linear-gradient(180deg, #ebe8eb6e, #bdadbd6e, #8168816e, #4e444e6e);
+    letter-spacing: 0.3em; // abstand buchstabe
+    // font-family: "ChopinScript";
+    // font-family: 'Marck Script', cursive;
+    font-family: 'Open Sans', sans-serif;
+    // font-family: 'Pirata One', cursive;
+    // font-family: 'Raleway', sans-serif;
+    // font-family: 'Architects Daughter', cursive;
 }
 
 @media(max-width: 1000px) {
@@ -11,5 +23,3 @@ body {
         height: 1em;
     }
 }
-
-// Background: linear-gradient(180deg, rgb(216, 224, 216), rgb(33, 107, 30));

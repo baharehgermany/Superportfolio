@@ -1,19 +1,14 @@
 .first {
     height: 100vh;
-    background-color: #D7CCC8;
-}
-
-.top {
-    height: 100vh;
     width: 70vw;
 }
 
 .pic {
     img {
         position: absolute;
-        box-shadow: 10px 10px 8px #888888;
-        border-radius: 3px;
-        left: 60vw;
+        box-shadow: 15px 15px 8px #888888;
+        border-radius: 20px;
+        left: 55vw;
         top: 25vh;
         height: 450px;
         width: 350px;
@@ -23,7 +18,7 @@
         animation-duration: 3s; //dauer der animation
         animation-iteration-count: 1; //wie oft ausführen
         animation-fill-mode: forwards; // am ende stehend/ backwards: an anfang stehend
-        animation-delay: 2s; // verzögernd
+        animation-delay: 1s; // verzögernd
     }
     //von zu methode
     @keyframes show {
@@ -36,118 +31,63 @@
     }
 }
 
-.underbox {
-    height: 220px;
-    img {
-        margin-right: 20px;
-        height: 50px;
-        width: 50px;
-    }
-}
-
 .container {
     display: flex;
-    justify-content: end;
-    align-items: center;
+    // justify-content: end;
+    // align-items: center;
     position: absolute;
     top: 82%;
-    left: 11%;
+    // left: 11%;
 }
 
 .btn {
     width: 40px;
     height: 40px;
     background-color: transparent;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-left: 1.2em;
-    margin-right: 1em;
+    margin-left: 2em;
     cursor: pointer;
-    transition: all 0.3s;
-    border-radius: 10px;
     opacity: 0;
     animation-name: social;
-    animation-duration: 2s;
-    animation-delay: 3s;
-    animation-iteration-count: 1;
+    animation-duration: 1s; //smooth einblendung
+    animation-delay: 1s; //nach diese zeit einblenden
     animation-fill-mode: forwards;
 }
 
-i.fa {
-    font-size: 44px;
-}
-
-#fb {
-    color: #006FFF;
-    text-shadow: 0 0 30px #006FFF;
-}
-
-#ig {
-    color: #FF5F40;
-    text-shadow: 0 0 30px #FF5F40;
-}
-
-#gh {
-    color: #00ACFF;
-    text-shadow: 0 0 30px #00ACFF;
-}
-
-#li {
-    color: #00ACFF;
-    text-shadow: 0 0 30px #00ACFF;
-}
-
-#di {
-    color: #00ACFF;
-    text-shadow: 0 0 30px #00ACFF;
-}
-
-.btn.fb-btn {
-    box-shadow: 0 20px 20px -17px rgba(0, 111, 255, 0.53);
-}
-
-.btn.fb-btn:hover {
-    transform: scale(1.2);
-    box-shadow: 0 30px 45px -15px rgba(0, 111, 255, 0.65);
-}
-
-.btn.ig-btn {
-    box-shadow: 0 20px 20px -17px rgba(255, 16, 39, 0.5);
-}
-
-.btn.ig-btn:hover {
-    transform: scale(1.2);
-    box-shadow: 0 30px 45px -15px rgba(255, 16, 39, 0.57);
-}
-
-.btn.gh-btn {
-    box-shadow: 0 20px 20px -17px rgba(0, 255, 8, 0.53);
-}
-
-.btn.gh-btn:hover {
-    transform: scale(1.2);
-    box-shadow: 0 30px 45px -15px rgba(0, 117, 18, 0.6);
-}
-
-.btn.li-btn {
-    box-shadow: 0 20px 20px -17px rgba(8, 179, 139, 0.53);
-}
-
-.btn.li-btn:hover {
-    transform: scale(1.2);
-    box-shadow: 0 30px 45px -15px rgba(0, 255, 208, 0.6);
-}
-
-.btn.di-btn {
-    box-shadow: 0 20px 20px -17px rgba(113, 0, 138, 0.53);
-}
-
-.btn.di-btn:hover {
-    transform: scale(1.2);
-    box-shadow: 0 30px 45px -15px rgba(238, 0, 255, 0.6);
-}
-
+// .btn.fb-btn {
+//     box-shadow: 0 20px 20px -17px rgba(0, 111, 255, 0.53);
+// }
+// .btn.fb-btn:hover {
+//     transform: scale(1.2);
+//     box-shadow: 0 30px 45px -15px rgba(0, 111, 255, 0.65);
+// }
+// .btn.ig-btn {
+//     box-shadow: 0 20px 20px -17px rgba(255, 16, 39, 0.5);
+// }
+// .btn.ig-btn:hover {
+//     transform: scale(1.2);
+//     box-shadow: 0 30px 45px -15px rgba(255, 16, 39, 0.57);
+// }
+// .btn.gh-btn {
+//     box-shadow: 0 20px 20px -17px rgba(0, 255, 8, 0.53);
+// }
+// .btn.gh-btn:hover {
+//     transform: scale(1.2);
+//     box-shadow: 0 30px 45px -15px rgba(0, 117, 18, 0.6);
+// }
+// .btn.li-btn {
+//     box-shadow: 0 20px 20px -17px rgba(8, 179, 139, 0.53);
+// }
+// .btn.li-btn:hover {
+//     transform: scale(1.2);
+//     box-shadow: 0 30px 45px -15px rgba(0, 255, 208, 0.6);
+// }
+// .btn.di-btn {
+//     box-shadow: 0 20px 20px -17px rgba(113, 0, 138, 0.53);
+// }
+// .btn.di-btn:hover {
+//     transform: scale(1.2);
+//     box-shadow: 0 30px 45px -15px rgba(238, 0, 255, 0.6);
+// }
 @keyframes social {
     from {
         opacity: 0;
@@ -183,13 +123,13 @@ i.fa {
 
 .animated-title {
     color: #222;
-    font-family: Roboto, Arial, sans-serif;
+    // font-family: Roboto, Arial, sans-serif;
     height: 45vmin;
     left: 34%;
     position: absolute;
     top: 50%;
     transform: translate(-50%, -50%);
-    width: 90vmin;
+    width: 85vmin;
 }
 
 .animated-title>div {
@@ -236,4 +176,8 @@ i.fa {
     animation-fill-mode: forwards;
     top: 0;
     transform: translate(0, -100%);
+}
+
+.underbox {
+    margin-left: -20px;
 }

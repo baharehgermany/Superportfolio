@@ -1,26 +1,40 @@
-.menu {
-    // background-color: rgb(241, 241, 136);
-    // box-shadow: 0px 1px 3px 0 rgba(19, 18, 1, 0.2); //1.wie stark der schatten verschoben ist 2.farbe
-    height: 80px;
-    width: 70vw;
-    display: flex;
-    z-index: 10;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    --def: rgb(243, 243, 158);
-    --inv: rgb(0, 0, 0);
-    background-color: white;
-    border-bottom: 1px solid black;
-    opacity: 0; //durchsichtig anfangs
-    animation-name: show;
-    animation-duration: 3s; //dauer der animation
-    animation-iteration-count: 1; //wie oft ausführen
-    animation-fill-mode: forwards; // am ende stehend/ backwards: an anfang stehend
-    animation-delay: 5s; // verzögernd
+a {
+    color: black;
+    text-decoration: none;
 }
 
-//von zu methode
+.menu {
+    margin-top: -8px;
+    position: fixed;
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+    justify-content: space-evenly;
+    background-color: rgb(96, 165, 117);
+    // height: 80px;
+    width: 70%;
+    --def: #eaf1ec6e;
+    // --inv: rgb(0, 0, 0);
+    // border-bottom: 1px solid black;
+    opacity: 0; //durchsichtig anfangs
+    animation-name: show;
+    animation-duration: 1s; //dauer der animation
+    animation-iteration-count: 1; //wie oft ausführen
+    animation-fill-mode: forwards; // am ende stehend/ backwards: an anfang stehend
+    animation-delay: 0s; // verzögernd
+}
+
+.box {
+    // margin-left: 5px;
+    // margin-right: 25px;
+    // width: 100%;
+    display: flex;
+    // justify-content: center;
+    // align-items: center;
+    // justify-content: center;
+}
+
+//von-zu methode
 @keyframes show {
     from {
         opacity: 0;
@@ -33,11 +47,11 @@
 .btn {
     position: relative;
     display: flex;
-    justify-content: center;
+    // justify-content: space-around;
     align-items: center;
-    margin-left: 60px;
-    margin-right: 60px;
-    padding: 0.4rem;
+    // margin-left: 60px;
+    // margin-right: 60px;
+    // padding: 0.4rem;
     font-size: 1.3rem;
     color: var(--inv);
     text-transform: uppercase;
@@ -79,13 +93,6 @@
     width: 100%;
 }
 
-.from-top:before {
-    bottom: 0;
-    border: 1px solid var(--def);
-    border-top: 0;
-    border-bottom: 0;
-}
-
 .from-top:after {
     top: 0;
     height: 20%;
@@ -107,17 +114,6 @@
     text-align: center;
 }
 
-.from-left:before {
-    right: 0;
-    border: 1px solid var(--def);
-    border-left: 0;
-    border-right: 0;
-}
-
-.from-left:after {
-    left: 0;
-}
-
 .from-left:hover:before,
 .from-left:hover:after {
     width: 100%;
@@ -133,17 +129,6 @@
     height: 100%;
 }
 
-.from-right:before {
-    left: 0;
-    border: 1px solid var(--def);
-    border-left: 0;
-    border-right: 0;
-}
-
-.from-right:after {
-    right: 0;
-}
-
 .from-right:hover:before,
 .from-right:hover:after {
     width: 100%;
@@ -152,27 +137,12 @@
 
 /* From center */
 
-.from-center:before {
-    top: 0;
-    left: 50%;
-    height: 100%;
-    width: 0;
-    border: 1px solid var(--def);
-    border-left: 0;
-    border-right: 0;
-}
-
 .from-center:after {
     bottom: 0;
     left: 0;
     height: 0;
     width: 100%;
     background: var(--def);
-}
-
-.from-center:hover:before {
-    left: 0;
-    width: 100%;
 }
 
 .from-center:hover:after {
@@ -190,13 +160,6 @@
     width: 100%;
 }
 
-.from-bottom:before {
-    top: 0;
-    border: 1px solid var(--def);
-    border-top: 0;
-    border-bottom: 0;
-}
-
 .from-bottom:after {
     bottom: 0;
     height: 0;
@@ -206,34 +169,3 @@
 .from-bottom:hover:after {
     height: 100%;
 }
-
-
-/* ~~~~~~~~~~~~ GLOBAL SETTINGS ~~~~~~~~~~~~ */
-
-*,
-*:before,
-*:after {
-    box-sizing: border-box;
-}
-
-// body {
-//     --def: #96B7C4;
-//     --inv: #fff;
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//     flex-direction: column;
-//     height: 100vh;
-//     width: 100%;
-//     background-image: linear-gradient(-25deg, #616161 0%, #96B7C4 100%);
-// }
-// html {
-//     font-size: 12px;
-//     font-family: 'Playfair Display', serif;
-// }
-// div {
-//     margin-bottom: 3rem;
-// }
-// div:last-child {
-//     margin-bottom: 0;
-// }

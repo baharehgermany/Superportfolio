@@ -1,4 +1,17 @@
 .footer {
-    background-color: rgb(241, 241, 136);
-    height: 200px;
+    width: 70vw;
+    background-color: rgba(96, 165, 117, 0.795);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.kontakt {
+    width: 400px;
+}
+
+.imprint {
+    height: 100px;
+    display: flex;
+    align-items: flex-end;
 }

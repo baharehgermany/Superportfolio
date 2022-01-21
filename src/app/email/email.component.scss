@@ -1,11 +1,21 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70vw;
+    height: 600px;
+}
+
 .container {
-    min-width: 700px;
-    min-height: 350px;
+    width: 800px;
+    height: 300px;
     border-radius: 20px;
     position: relative;
     -webkit-transition: 1.5s ease-in-out;
     transition: 1.5s ease-in-out;
     transform-style: preserve-3d;
+    display: flex;
+    justify-content: center;
 }
 
 .side {
@@ -14,15 +24,22 @@
     width: 100%;
     height: 100%;
     padding: 20px 50px;
-    color: #fff;
+    // color: black;
     transform-style: preserve-3d;
     backface-visibility: hidden;
     border-radius: 20px;
 }
 
 .content {
+    // margin: -20px;
     transform: translatez(70px) scale(0.8);
     line-height: 1.5em;
+    img {
+        // display: flex;
+        // justify-content: center;
+        width: 200px;
+        height: 100px;
+    }
 }
 
 .content h1 {
@@ -39,7 +56,7 @@
     position: absolute;
     bottom: -20px;
     height: 3px;
-    background-color: #3e3;
+    background-color: black;
     width: 70px;
     left: 50%;
     transform: translateX(-50%);
@@ -49,15 +66,14 @@
     z-index: 2;
     background-size: 100vh;
     background-size: cover;
-    background-image: url(https://livewallpaperhd.com/wp-content/uploads/2017/07/Dark-Elegant-Wallpaper.jpg);
+    background-color: rgba(96, 165, 117, 0.795);
 }
 
 .back {
-    background-color: #333;
+    background-color: rgba(96, 165, 117, 0.795);
     transform: rotateY(180deg);
     z-index: 0;
     padding-top: 10px;
-    background-image: url(https://userscontent2.emaze.com/images/f9538183-0ff9-478f-b964-c8ab90421e3b/3d28e192fda5c17250f96a2779c84475.jpg);
 }
 
 .container:hover {
@@ -85,7 +101,7 @@ form textarea {
     border-bottom: 2px solid #444;
     padding: 5px;
     width: 100%;
-    color: #fff;
+    color: #D7CCC8;
 }
 
 form label {
@@ -97,9 +113,9 @@ form input[type="submit"] {
     width: auto;
     margin: 10px auto;
     padding: 5px 10px;
-    border: 3px solid #555;
+    border: 3px solid black;
     border-radius: 4px;
-    color: #fff;
+    color: black;
     cursor: pointer;
 }
 
@@ -120,6 +136,6 @@ form input[type="submit"] {
 }
 
 .white-mode:hover {
-    background-color: #fff;
+    background-color: #D7CCC8;
     color: #122;
 }

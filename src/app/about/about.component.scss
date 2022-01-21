@@ -1,3 +1,28 @@
 .about {
-    height: 100vh;
+    margin-top: -25px;
+    width: 70vw;
+    // background-color: #D7CCC8;
+}
+
+.overline {
+    height: 100px;
+    // background-color: burlywood;
+    text-align: center;
+}
+
+.person {
+    height: 200px;
+}
+
+.pic {
+    img {
+        object-fit: cover;
+        height: 300px;
+        width: 100%;
+        object-position: 0px -70px;
+    }
+}
+
+.buisnes {
+    height: 200px;
 }
