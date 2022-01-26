@@ -1,17 +1,30 @@
+a {
+    color: black;
+    text-decoration: none;
+}
+
 .footer {
-    width: 70vw;
-    background-color: rgba(96, 165, 117, 0.795);
+    height: 130px;
+    background-color: rgb(96, 165, 117);
     display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
 }
 
-.kontakt {
-    width: 400px;
+.pics {
+    display: flex;
+    justify-content: center;
+    img {
+        height: 50px;
+        width: 50px;
+        margin-right: 10%;
+    }
 }
 
-.imprint {
-    height: 100px;
+.data {
     display: flex;
-    align-items: flex-end;
+    justify-content: center;
 }
+
+@media(max-width: 1000px) {}

@@ -1,25 +1,20 @@
-/* You can add global styles to this file, and also import other style files */
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    color: black;
-    margin-left: 200px !important;
-    margin-right: 200px !important;
-    background: linear-gradient(180deg, #ebe8eb6e, #bdadbd6e, #8168816e, #4e444e6e);
-    letter-spacing: 0.3em; // abstand buchstabe
-    // font-family: "ChopinScript";
-    // font-family: 'Marck Script', cursive;
-    font-family: 'Open Sans', sans-serif;
-    // font-family: 'Pirata One', cursive;
-    // font-family: 'Raleway', sans-serif;
-    // font-family: 'Architects Daughter', cursive;
-}
-
-@media(max-width: 1000px) {
-    h1 {
-        height: 1em;
-    }
-}
+        /* You can add global styles to this file, and also import other style files */
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            margin: 0;
+            color: black;
+            margin-left: 200px !important;
+            margin-right: 200px !important;
+            letter-spacing: 0.3em; // abstand buchstabe
+            font-family: 'Architects Daughter', cursive;
+        }
+        
+        @media(max-width: 1000px) {
+            body {
+                margin: 0;
+            }
+        }

@@ -15,6 +15,7 @@ import { StartComponent } from './start/start.component';
 import { Router, Scroll } from '@angular/router';
 import { ViewportScroller } from '@angular/common';
 import { filter } from 'rxjs';
+import { DataComponent } from './data/data.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { filter } from 'rxjs';
     EmailComponent,
     FooterComponent,
     ImprintComponent,
-    StartComponent
+    StartComponent,
+    DataComponent
   ],
   imports: [
     BrowserModule,

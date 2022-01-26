@@ -1,183 +1,157 @@
-.first {
-    height: 100vh;
-    width: 70vw;
-}
-
-.pic {
-    img {
-        position: absolute;
-        box-shadow: 15px 15px 8px #888888;
-        border-radius: 20px;
-        left: 55vw;
-        top: 25vh;
-        height: 450px;
-        width: 350px;
-        object-fit: cover; //bild nicht verzehrt
-        opacity: 0; //durchsichtig anfangs
-        animation-name: show;
-        animation-duration: 3s; //dauer der animation
-        animation-iteration-count: 1; //wie oft ausführen
-        animation-fill-mode: forwards; // am ende stehend/ backwards: an anfang stehend
-        animation-delay: 1s; // verzögernd
-    }
-    //von zu methode
-    @keyframes show {
-        from {
-            opacity: 0;
+        .main {
+            height: 100vh;
+            width: 100%;
         }
-        to {
-            opacity: 1; // 0-1 möglich
+        
+        .pic {
+            img {
+                position: absolute;
+                box-shadow: 15px 15px 8px #888888;
+                border-radius: 20px;
+                left: 60vw;
+                top: 25vh;
+                height: 400px;
+                width: 300px;
+                object-fit: cover; //bild nicht verzehrt
+                opacity: 0; //durchsichtig anfangs
+                animation-name: show;
+                animation-duration: 3s; //dauer der animation
+                animation-iteration-count: 1; //wie oft ausführen
+                animation-fill-mode: forwards; // am ende stehend/ backwards: an anfang stehend
+                animation-delay: 1s; // verzögernd
+            }
+            //von zu methode
+            @keyframes show {
+                from {
+                    opacity: 0;
+                }
+                to {
+                    opacity: 1; // 0-1 möglich
+                }
+            }
         }
-    }
-}
-
-.container {
-    display: flex;
-    // justify-content: end;
-    // align-items: center;
-    position: absolute;
-    top: 82%;
-    // left: 11%;
-}
-
-.btn {
-    width: 40px;
-    height: 40px;
-    background-color: transparent;
-    margin-left: 2em;
-    cursor: pointer;
-    opacity: 0;
-    animation-name: social;
-    animation-duration: 1s; //smooth einblendung
-    animation-delay: 1s; //nach diese zeit einblenden
-    animation-fill-mode: forwards;
-}
-
-// .btn.fb-btn {
-//     box-shadow: 0 20px 20px -17px rgba(0, 111, 255, 0.53);
-// }
-// .btn.fb-btn:hover {
-//     transform: scale(1.2);
-//     box-shadow: 0 30px 45px -15px rgba(0, 111, 255, 0.65);
-// }
-// .btn.ig-btn {
-//     box-shadow: 0 20px 20px -17px rgba(255, 16, 39, 0.5);
-// }
-// .btn.ig-btn:hover {
-//     transform: scale(1.2);
-//     box-shadow: 0 30px 45px -15px rgba(255, 16, 39, 0.57);
-// }
-// .btn.gh-btn {
-//     box-shadow: 0 20px 20px -17px rgba(0, 255, 8, 0.53);
-// }
-// .btn.gh-btn:hover {
-//     transform: scale(1.2);
-//     box-shadow: 0 30px 45px -15px rgba(0, 117, 18, 0.6);
-// }
-// .btn.li-btn {
-//     box-shadow: 0 20px 20px -17px rgba(8, 179, 139, 0.53);
-// }
-// .btn.li-btn:hover {
-//     transform: scale(1.2);
-//     box-shadow: 0 30px 45px -15px rgba(0, 255, 208, 0.6);
-// }
-// .btn.di-btn {
-//     box-shadow: 0 20px 20px -17px rgba(113, 0, 138, 0.53);
-// }
-// .btn.di-btn:hover {
-//     transform: scale(1.2);
-//     box-shadow: 0 30px 45px -15px rgba(238, 0, 255, 0.6);
-// }
-@keyframes social {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-        left: 25%
-    }
-}
-
-@import url('https://fonts.googleapis.com/css?family=Roboto:700');
-@keyframes showTopText {
-    0% {
-        transform: translate3d(0, 100%, 0);
-    }
-    40%,
-    60% {
-        transform: translate3d(0, 50%, 0);
-    }
-    100% {
-        transform: translate3d(0, 0, 0);
-    }
-}
-
-@keyframes showBottomText {
-    0% {
-        transform: translate3d(0, -100%, 0);
-    }
-    100% {
-        transform: translate3d(0, 0, 0);
-    }
-}
-
-.animated-title {
-    color: #222;
-    // font-family: Roboto, Arial, sans-serif;
-    height: 45vmin;
-    left: 34%;
-    position: absolute;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width: 85vmin;
-}
-
-.animated-title>div {
-    height: 50%;
-    overflow: hidden;
-    position: absolute;
-    width: 100%;
-}
-
-.animated-title>div div {
-    font-size: 8vmin;
-    padding: 2vmin 0;
-    position: absolute;
-}
-
-.animated-title>div div span {
-    display: block;
-}
-
-.animated-title>div.text-top {
-    border-bottom: 1vmin solid #000;
-    top: 0;
-}
-
-.animated-title>div.text-top div {
-    animation: showTopText 2s;
-    animation-delay: 2.5s;
-    animation-fill-mode: forwards;
-    bottom: 0;
-    transform: translate(0, 100%);
-}
-
-.animated-title>div.text-top div span:first-child {
-    color: #767676;
-}
-
-.animated-title>div.text-bottom {
-    bottom: 0;
-}
-
-.animated-title>div.text-bottom div {
-    animation: showBottomText 1s;
-    animation-delay: 3s;
-    animation-fill-mode: forwards;
-    top: 0;
-    transform: translate(0, -100%);
-}
-
-.underbox {
-    margin-left: -20px;
-}
+        
+        @keyframes showTopText {
+            0% {
+                transform: translate3d(0, 100%, 0);
+            }
+            40%,
+            60% {
+                transform: translate3d(0, 50%, 0);
+            }
+            100% {
+                transform: translate3d(0, 0, 0);
+            }
+        }
+        
+        @keyframes showBottomText {
+            0% {
+                transform: translate3d(0, -100%, 0);
+            }
+            100% {
+                transform: translate3d(0, 0, 0);
+            }
+        }
+        
+        .animated-title {
+            color: #222;
+            height: 45vmin;
+            // overflow: hidden;
+            left: 34%;
+            position: absolute;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 85vmin;
+        }
+        
+        .animated-title>div {
+            height: 50%;
+            overflow: hidden;
+            position: absolute;
+            width: 100%;
+        }
+        
+        .animated-title>div div {
+            font-size: 6vmin;
+            top: 13%;
+            // padding: 2vmin 0;
+            position: absolute;
+        }
+        
+        .animated-title>div div span {
+            display: block;
+        }
+        
+        .animated-title>div.text-top {
+            border-bottom: 1vmin solid #000;
+            top: 0;
+        }
+        
+        .animated-title>div.text-top div {
+            animation: showTopText 2s;
+            animation-delay: 2.5s;
+            animation-fill-mode: forwards;
+            bottom: 0;
+            transform: translate(0, 100%);
+        }
+        
+        .animated-title>div.text-top div span:first-child {
+            color: #767676;
+        }
+        
+        .animated-title>div.text-bottom {
+            bottom: 0;
+        }
+        
+        .animated-title>div.text-bottom div {
+            animation: showBottomText 1s;
+            animation-delay: 3s;
+            animation-fill-mode: forwards;
+            top: 0;
+            transform: translate(0, -100%);
+        }
+        
+        .underbox {
+            cursor: pointer;
+            img {
+                object-fit: cover; //bild nicht verzehrt
+                width: 150px;
+                position: absolute;
+                bottom: 22%;
+                left: 25%;
+                opacity: 0; //durchsichtig anfangs
+                animation-name: show;
+                animation-duration: 5s; //dauer der animation
+                animation-iteration-count: 1; //wie oft ausführen
+                animation-fill-mode: forwards; // am ende stehend/ backwards: an anfang stehend
+                animation-delay: 4s;
+            }
+        }
+        
+        //mobile ansicht
+        @media(max-width: 1000px) {
+            .animated-title {
+                width: 55vmin !important;
+            }
+            .pic {
+                img {
+                    height: 300px !important;
+                    width: 200px !important;
+                    top: 29% !important;
+                }
+            }
+            .animated-title>div.text-bottom div {
+                animation-delay: 4s !important;
+            }
+            .underbox {
+                background-color: salmon;
+                img {
+                    height: 70px !important;
+                    width: 140px !important;
+                    bottom: 10% !important;
+                    left: 60% !important;
+                    top: 80%;
+                    animation-delay: 2s !important;
+                }
+            }
+        }

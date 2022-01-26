@@ -1,28 +1,66 @@
-.about {
-    margin-top: -25px;
-    width: 70vw;
-    // background-color: #D7CCC8;
-}
-
-.overline {
-    height: 100px;
-    // background-color: burlywood;
-    text-align: center;
-}
-
-.person {
-    height: 200px;
-}
-
-.pic {
-    img {
-        object-fit: cover;
-        height: 300px;
-        width: 100%;
-        object-position: 0px -70px;
+    .about {
+        display: flex;
+        flex-direction: column;
+        width: 95%;
     }
-}
-
-.buisnes {
-    height: 200px;
-}
+    
+    div.at-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-top: 5%;
+    }
+    
+    .at-item {
+        color: rgb(96, 165, 117);
+        animation-name: elastic;
+        animation-duration: 1.5s;
+        animation-timing-function: linear;
+        animation-delay: 0s;
+        animation-iteration-count: infinite;
+        animation-direction: normal;
+        animation-fill-mode: none;
+    }
+    
+    @keyframes elastic {
+        0% {
+            transform: scale(1);
+        }
+        30% {
+            transform: scaleX(2.25) scaleY(0.75);
+        }
+        40% {
+            transform: scaleX(0.75) scaleY(2.50);
+        }
+        60% {
+            transform: scaleX(1.15) scaleY(0.85);
+        }
+        100% {
+            transform: scale(1);
+        }
+    }
+    
+    .all-box {
+        margin-top: 5%;
+    }
+    
+    .person {
+        text-align: center;
+    }
+    
+    .pic {
+        display: flex;
+        justify-content: center;
+        img {
+            object-fit: cover;
+            height: 300px;
+        }
+    }
+    
+    .buisnes {
+        text-align: center;
+        // height: 200px;
+    }
+    
+    //mobile ansicht
+    @media(max-width: 1000px) {}

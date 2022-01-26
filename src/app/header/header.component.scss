@@ -4,15 +4,32 @@ a {
 }
 
 .menu {
-    margin-top: -8px;
-    position: fixed;
-    z-index: 5;
     display: flex;
-    justify-content: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
     background-color: rgb(96, 165, 117);
-    // height: 80px;
-    width: 70%;
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    width: 73%;
+}
+
+.logo {
+    margin-left: 50px;
+    height: 50px;
+    width: 50px;
+    // border: black solid 2px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img {
+        height: 40px;
+        width: 40px;
+    }
+}
+
+.links {
+    display: flex;
     --def: #eaf1ec6e;
     // --inv: rgb(0, 0, 0);
     // border-bottom: 1px solid black;
@@ -25,13 +42,9 @@ a {
 }
 
 .box {
-    // margin-left: 5px;
-    // margin-right: 25px;
-    // width: 100%;
     display: flex;
-    // justify-content: center;
-    // align-items: center;
-    // justify-content: center;
+    justify-content: space-between;
+    margin-right: 30px;
 }
 
 //von-zu methode
@@ -47,11 +60,7 @@ a {
 .btn {
     position: relative;
     display: flex;
-    // justify-content: space-around;
     align-items: center;
-    // margin-left: 60px;
-    // margin-right: 60px;
-    // padding: 0.4rem;
     font-size: 1.3rem;
     color: var(--inv);
     text-transform: uppercase;
@@ -168,4 +177,30 @@ a {
 .from-bottom:hover:before,
 .from-bottom:hover:after {
     height: 100%;
+}
+
+.logo-bars {
+    // display: none;
+    height: 80px;
+    width: 80px;
+}
+
+.hide-bars {
+    display: none;
+}
+
+@media(max-width: 1000px) {
+    .hide-bars {
+        display: block;
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 20px;
+    }
+    .bars-menu {
+        height: 100px;
+        width: 100px;
+    }
+    .menu {
+        display: none;
+    }
 }
