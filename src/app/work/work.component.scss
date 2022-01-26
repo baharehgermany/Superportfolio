@@ -3,14 +3,14 @@ img {
     width: 80px;
 }
 
-div.at-container {
+.overline-box {
     display: flex;
     align-items: center;
     justify-content: center;
     padding-top: 5%;
 }
 
-.at-item {
+.overline {
     color: rgb(96, 165, 117);
     animation-name: elastic;
     animation-duration: 1.5s;
@@ -132,19 +132,23 @@ div.at-container {
 
 //mobile ansicht
 @media(max-width: 1000px) {
-    .work-box {
+    h1,
+    h2 {
+        font-size: 1.2em !important;
+    }
+    p {
+        font-size: 0.7em !important;
+    }
+    .front {
+        height: 100px !important;
+        width: 60% !important;
+    }
+    .back {
         height: 100px !important;
         width: 60% !important;
         // background-color: sandybrown;
-        h1,
-        h2 {
-            font-size: 1.2em !important;
-        }
-        p {
-            font-size: 0.7em !important;
-        }
     }
-    .work-text {
+    .text {
         width: 50% !important;
         // background-color: blueviolet;
         img {

@@ -16,6 +16,8 @@ import { Router, Scroll } from '@angular/router';
 import { ViewportScroller } from '@angular/common';
 import { filter } from 'rxjs';
 import { DataComponent } from './data/data.component';
+// import { FlexLayoutModule } from '@angular/flex-layout';
+
 
 @NgModule({
   declarations: [
@@ -33,7 +35,8 @@ import { DataComponent } from './data/data.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    // FlexLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]

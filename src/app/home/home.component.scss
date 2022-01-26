@@ -1,157 +1,154 @@
-        .main {
-            height: 100vh;
-            width: 100%;
+.img-me {
+    position: absolute;
+    box-shadow: 15px 15px 8px #888888be;
+    border-radius: 20px;
+    left: 60vw;
+    top: 25vh;
+    height: 400px;
+    width: 300px;
+    object-fit: cover; //bild nicht verzehrt
+    opacity: 0; //durchsichtig anfangs
+    animation-name: show;
+    animation-duration: 3s; //dauer der animation
+    animation-iteration-count: 1; //wie oft ausführen
+    animation-fill-mode: forwards; // am ende stehend/ backwards: an anfang stehend
+    animation-delay: 1s; // verzögernd
+    @keyframes show {
+        from {
+            opacity: 0;
         }
-        
-        .pic {
-            img {
-                position: absolute;
-                box-shadow: 15px 15px 8px #888888;
-                border-radius: 20px;
-                left: 60vw;
-                top: 25vh;
-                height: 400px;
-                width: 300px;
-                object-fit: cover; //bild nicht verzehrt
-                opacity: 0; //durchsichtig anfangs
-                animation-name: show;
-                animation-duration: 3s; //dauer der animation
-                animation-iteration-count: 1; //wie oft ausführen
-                animation-fill-mode: forwards; // am ende stehend/ backwards: an anfang stehend
-                animation-delay: 1s; // verzögernd
-            }
-            //von zu methode
-            @keyframes show {
-                from {
-                    opacity: 0;
-                }
-                to {
-                    opacity: 1; // 0-1 möglich
-                }
-            }
+        to {
+            opacity: 1; // 0-1 möglich
         }
-        
-        @keyframes showTopText {
-            0% {
-                transform: translate3d(0, 100%, 0);
-            }
-            40%,
-            60% {
-                transform: translate3d(0, 50%, 0);
-            }
-            100% {
-                transform: translate3d(0, 0, 0);
-            }
-        }
-        
-        @keyframes showBottomText {
-            0% {
-                transform: translate3d(0, -100%, 0);
-            }
-            100% {
-                transform: translate3d(0, 0, 0);
-            }
-        }
-        
-        .animated-title {
-            color: #222;
-            height: 45vmin;
-            // overflow: hidden;
-            left: 34%;
-            position: absolute;
-            top: 50%;
-            transform: translate(-50%, -50%);
-            width: 85vmin;
-        }
-        
-        .animated-title>div {
-            height: 50%;
-            overflow: hidden;
-            position: absolute;
-            width: 100%;
-        }
-        
-        .animated-title>div div {
-            font-size: 6vmin;
-            top: 13%;
-            // padding: 2vmin 0;
-            position: absolute;
-        }
-        
-        .animated-title>div div span {
-            display: block;
-        }
-        
-        .animated-title>div.text-top {
-            border-bottom: 1vmin solid #000;
-            top: 0;
-        }
-        
-        .animated-title>div.text-top div {
-            animation: showTopText 2s;
-            animation-delay: 2.5s;
-            animation-fill-mode: forwards;
-            bottom: 0;
-            transform: translate(0, 100%);
-        }
-        
-        .animated-title>div.text-top div span:first-child {
-            color: #767676;
-        }
-        
-        .animated-title>div.text-bottom {
-            bottom: 0;
-        }
-        
-        .animated-title>div.text-bottom div {
-            animation: showBottomText 1s;
-            animation-delay: 3s;
-            animation-fill-mode: forwards;
-            top: 0;
-            transform: translate(0, -100%);
-        }
-        
-        .underbox {
-            cursor: pointer;
-            img {
-                object-fit: cover; //bild nicht verzehrt
-                width: 150px;
-                position: absolute;
-                bottom: 22%;
-                left: 25%;
-                opacity: 0; //durchsichtig anfangs
-                animation-name: show;
-                animation-duration: 5s; //dauer der animation
-                animation-iteration-count: 1; //wie oft ausführen
-                animation-fill-mode: forwards; // am ende stehend/ backwards: an anfang stehend
-                animation-delay: 4s;
-            }
-        }
-        
-        //mobile ansicht
-        @media(max-width: 1000px) {
-            .animated-title {
-                width: 55vmin !important;
-            }
-            .pic {
-                img {
-                    height: 300px !important;
-                    width: 200px !important;
-                    top: 29% !important;
-                }
-            }
-            .animated-title>div.text-bottom div {
-                animation-delay: 4s !important;
-            }
-            .underbox {
-                background-color: salmon;
-                img {
-                    height: 70px !important;
-                    width: 140px !important;
-                    bottom: 10% !important;
-                    left: 60% !important;
-                    top: 80%;
-                    animation-delay: 2s !important;
-                }
-            }
-        }
+    }
+}
+
+.main {
+    height: 100vh;
+    width: 100%;
+}
+
+//von zu methode
+@keyframes showTopText {
+    0% {
+        transform: translate3d(0, 100%, 0);
+    }
+    40%,
+    60% {
+        transform: translate3d(0, 50%, 0);
+    }
+    100% {
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes showBottomText {
+    0% {
+        transform: translate3d(0, -100%, 0);
+    }
+    100% {
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.animated-title {
+    color: #222;
+    height: 35vmin;
+    // overflow: hidden;
+    left: 34%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 85vmin;
+}
+
+.animated-title>div {
+    height: 50%;
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+}
+
+.animated-title>div div {
+    font-size: 6vmin;
+    top: 13%;
+    // padding: 2vmin 0;
+    position: absolute;
+}
+
+.animated-title>div div span {
+    display: block;
+}
+
+.animated-title>div.text-top {
+    border-bottom: 1vmin solid #000;
+    top: 0;
+}
+
+.animated-title>div.text-top div {
+    animation: showTopText 2s;
+    animation-delay: 2.5s;
+    animation-fill-mode: forwards;
+    bottom: 0;
+    transform: translate(0, 100%);
+}
+
+.animated-title>div.text-top div span:first-child {
+    color: #767676;
+}
+
+.animated-title>div.text-bottom {
+    bottom: 0;
+}
+
+.animated-title>div.text-bottom div {
+    animation: showBottomText 1s;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+    top: 0;
+    transform: translate(0, -100%);
+}
+
+.img-mail {
+    cursor: pointer;
+    object-fit: cover; //bild nicht verzehrt
+    width: 100px;
+    position: absolute;
+    bottom: 15%;
+    left: 25%;
+    opacity: 0; //durchsichtig anfangs
+    animation-name: show;
+    animation-duration: 5s; //dauer der animation
+    animation-iteration-count: 1; //wie oft ausführen
+    animation-fill-mode: forwards; // am ende stehend/ backwards: an anfang stehend
+    animation-delay: 4s;
+}
+
+//mobile ansicht
+@media(max-width: 1000px) {
+    .animated-title {
+        width: 40vmin !important;
+        left: 35% !important;
+        top: 55% !important;
+    }
+    .img-me {
+        left: 60vw !important;
+        top: 40vh !important;
+        height: 200px !important;
+        width: 200px !important;
+    }
+    .animated-title>div div {
+        font-size: 4vmin !important;
+    }
+    .animated-title>div.text-bottom div {
+        animation-delay: 2s !important;
+    }
+    .img-mail {
+        height: 50px !important;
+        width: 100px !important;
+        // bottom: 20% !important;
+        left: 29% !important;
+        top: 75% !important;
+        animation-delay: 1.5s !important;
+    }
+}
